@@ -1,33 +1,35 @@
 /****** Script for SelectTopNRows command from SSMS  ******/
 
 /*
+🏠 Project Title: Nashville Housing Data Cleaning with SQL
 
-Project Title: 🏠 Nashville Housing Data Cleaning in SQL
-
-Description:
-This project showcases my SQL data cleaning skills using Microsoft SQL Server. 
-The dataset contains real estate transaction records from Nashville, TN, with several quality issues such as:
+📌 Description:
+This project demonstrates my ability to clean and transform messy real estate transaction data using Microsoft SQL Server (SSMS).
+The dataset includes records from Nashville, TN, and presents several data quality issues such as:
 - Inconsistent date formats
 - Missing property addresses
-- Redundant or messy data entries
+- Concatenated address fields
+- Duplicate transactions
+- Non-standard categorical values (e.g., 'Y'/'N' instead of 'Yes'/'No')
 
-Key transformations performed:
-✔ Standardized Sale Date using CONVERT()
-✔ Populated missing PropertyAddress via self-join and ISNULL()
-✔ Added new columns using ALTER TABLE
-✔ Filtered and sorted using WHERE and ORDER BY
-✔ Ensured integrity by joining on ParcelID and UniqueID
+🎯 Key Transformations:
+✔ Standardized `SaleDate` using `CONVERT()`
+✔ Filled missing `PropertyAddress` values using self-join with `ISNULL()`
+✔ Split address fields using `SUBSTRING()` and `PARSENAME()`
+✔ Harmonized Yes/No values using `CASE WHEN`
+✔ Removed duplicates with `ROW_NUMBER()` and CTE
+✔ Dropped unnecessary columns to clean the final table
 
-Tools Used:
-- SQL (T-SQL syntax)
+🛠 Tools Used:
+- SQL (T-SQL)
 - SSMS (SQL Server Management Studio)
 
-This script prepares the dataset for downstream analysis in tools like Power BI or Excel.
+This script prepares the dataset for clean reporting and downstream visualization in tools like Power BI or Excel.
 
-Author: [Your Name or GitHub handle]
-Repository: https://github.com/Salhadi/Project-Portfolio
-
+🧑‍💻 Author: [Your Name or GitHub handle]
+🔗 Repository: https://github.com/Salhadi/Project-Portfolio
 */
+
 
 
 
